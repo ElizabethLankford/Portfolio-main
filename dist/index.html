@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="icon" type="image/png" sizes="32x32" href="data:image/png;base64,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">
+    <title>Elizabeth Lankford Portfolio</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Karla:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <link rel="stylesheet" href="/assets/index-711b2e0b.css">
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__content">
+        <div class="header__logo-container">
+          <div class="header__logo-img-cont">
+            <img
+              src="/assets/Elizabeth_1-561f2a0e.jpg"
+              alt="Logo Image"
+              class="header__logo-img"
+            />
+          </div>
+          <span class="header__logo-sub">Elizabeth Lankford</span>
+        </div>
+        <div class="header__main">
+          <ul class="header__links">
+            <li class="header__link-wrapper">
+              <a href="./index.html" class="header__link"> Home </a>
+            </li>
+            <li class="header__link-wrapper">
+              <a href="./index.html#projects" class="header__link">
+                Projects
+              </a>
+            </li>
+            <li class="header__link-wrapper">
+              <a href="./index.html#about" class="header__link">About </a>
+            </li>
+            <li class="header__link-wrapper">
+              <a href="./index.html#contact" class="header__link"> Contact </a>
+            </li>
+          </ul>
+          <div class="header__main-ham-menu-cont">
+            <img
+              src="/assets/ham-menu-a1a32eb5.svg"
+              alt="hamburger menu"
+              class="header__main-ham-menu"
+            />
+            <img
+              src="/assets/ham-menu-close-9ba8c513.svg"
+              alt="hamburger menu close"
+              class="header__main-ham-menu-close d-none"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="header__sm-menu">
+        <div class="header__sm-menu-content">
+          <ul class="header__sm-menu-links">
+            <li class="header__sm-menu-link">
+              <a href="./index.html"> Home </a>
+            </li>
+
+            <li class="header__sm-menu-link">
+              <a href="./index.html#about"> About </a>
+            </li>
+            
+            <li class="header__sm-menu-link">
+              <a href="./index.html#projects"> Projects </a>
+            </li>
+
+            <li class="header__sm-menu-link">
+              <a href="./index.html#contact"> Contact </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <section class="home-hero">
+      <div class="home-hero__content">
+        <h1 class="heading-primary">Hey, My name is Elizabeth Lankford</h1>
+        <div class="home-hero__info">
+          <p class="text-primary">
+            I am a passionate frontend developer based near Dallas, TX. I have a passion for creating, learning, and growing my developer skills.
+          </p>
+        </div>
+        <div class="home-hero__cta">
+          <a href="./#projects" class="btn btn--bg">See my projects</a>
+        </div>
+      </div>
+      <div class="home-hero__socials">
+        <div class="home-hero__social">
+          <a href="https://www.linkedin.com/in/elizabethlankford/" target="_blank" class="home-hero__social-icon-link">
+            <img
+              src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFoAAABaCAMAAAAPdrEwAAAAclBMVEVHcEz///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////9wvwjfAAAAJXRSTlMAsfoQASDMbGvn2FbRAnfuJEf9jQmZg1reofdiM8dypbo94Bp+ddWmIgAAAU1JREFUWMPt1m1vgjAQB3AoK1qhKM8KoE533/8rbtGY0Q62ZndNNLn/S839gHJcGwQcDgcR3YZKqLDV5PIuhntiSS0reETR2jqF78Ska9LCNAklHRp0SEkrg1aUtDDo7kXu2t9avyX+OkTH3vo6kN6+xi/b2wwJAp3cJl9CP/k4z7vdRVJGFTkb9afNrU+Ly7nJ/+ooMDP/++a+1Z06c5Y1EQ1dlQLsbHsK+prCXGqNpuUF5nPA0lUKS1kh6XJRhk6iaFEs08tL4kT/GnH1RkPmjx790UWEpuMseR/y7Gcf5kh6PzxG31q4tbYrnU6eurf+K1F0t5uei0ZwOXM50rWxG+TWS0DRg1FUmYN7j6G31uwcXc63bvTZqjqYF8bQtVVVuhz43egPq6pZqPoHfbSqMjra/t6OdPTaqloxzTTTTDPNNNNPRXM4HA4Hl084VUjWFJFkPgAAAABJRU5ErkJggg=="
+              alt="icon"
+              class="home-hero__social-icon"
+            />
+          </a>
+        </div>
+        <div class="home-hero__social">
+          <a href="https://github.com/ElizabethLankford" target="_blank" class="home-hero__social-icon-link">
+            <img
+              src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAMAAAAM7l6QAAAAmVBMVEVHcEz///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////8JA+lgAAAAMnRSTlMA+O72HG0H/RnzUCGdTlG42D2gFPpqskFVHjguCjokrOACtXOavn8OpNnSm0bN++RlYLlWbsgAAAD7SURBVBgZvcBXYoJAAEXRJwLDKNiwxd5jarn7X1wGRxT136MneYnaHWs77SjUo3BnODPLpu40LBU2043IcMNEqmgY7phMF6EFJtMUL53OwSYqpTix1Ojm63zUkGLgQ2cvBmehwlqFBWBCeRGFua66OAN5bZylqobARt4bzkRVXaAjz+LEqpoBVp7FeVVVDtTlrXAyVbWAlbwNzlesq9k7MJS3pbBPVAr3OFt5YZ9CPR03JTXHvRpOP9HZEf6GQP1T0qjGSU+lMCDIj7XgoMKBgk10MTb8qrTAMS1VDPgZxfLWgBnoRhYA8iBo6U6y+0Zev5foURLFOkn0HP87Nyzer9fY7AAAAABJRU5ErkJggg=="
+              alt="icon"
+              class="home-hero__social-icon"
+            />
+          </a>
+        </div>
+        <div class="home-hero__social">
+          <a
+            href="#"
+            class="home-hero__social-icon-link home-hero__social-icon-link--bd-none"
+          >
+            <img
+              src="/assets/envelope-solid-380a36e4.svg"
+              alt="icon"
+              class="home-hero__social-icon"
+            />
+          </a>
+        </div>
+      </div>
+      <div class="home-hero__mouse-scroll-cont">
+        <div class="mouse"></div>
+      </div>
+    </section>
+    
+    
+        <section id="projects" class="projects sec-pad">
+      <div class="main-container">
+        <h2 class="heading heading-sec heading-sec__mb-bg">
+          <span class="heading-sec__main">Projects</span>
+          <span class="heading-sec__sub">
+            All my projects include links to the code and live version. Click the button to learn more about each one.
+          </span>
+        </h2>
+
+        <div class="projects__content">
+          <div class="projects__row">
+            <div class="projects__row-img-cont">
+              <img
+                src="/assets/Macbook-device-mockup-TravelJournal-518f7760.png"
+                alt="Software Screenshot"
+                class="projects__row-img"
+                loading="lazy"
+              />
+            </div>
+            <div class="projects__row-content">
+              <h3 class="projects__row-content-title">Travel Journal App</h3>
+              <p class="projects__row-content-desc">
+                My travel Journal is a simple app that uses a data set of travel destinations. It's built with functional React components. 
+              </p>
+              <a
+                href="./project-1.html"
+                class="btn btn--med btn--theme dynamicBgClr"
+                >Learn more</a
+              >
+            </div>
+          </div>
+          <div class="projects__row">
+            <div class="projects__row-img-cont">
+              <img
+                src="/assets/Macbook-device-mockup-CorgiMeme-25e0406a.png"
+                alt="Software Screenshot"
+                class="projects__row-img"
+                loading="lazy"
+              />
+            </div>
+            <div class="projects__row-content">
+              <h3 class="projects__row-content-title">Corgi Meme Generator</h3>
+              <p class="projects__row-content-desc">
+                The Corgi Meme Picker site allows users to select a mood to return a meme or gif of a corgi that matches the chosen selection. 
+              </p>
+              <a
+                href="./project-2.html"
+                class="btn btn--med btn--theme dynamicBgClr"
+                >Learn more</a
+              >
+            </div>
+          </div>
+          <div class="projects__row">
+            <div class="projects__row-img-cont">
+              <img
+                src="/assets/Macbook-device-mockup-RubyCreations-ee3c4c90.png"
+                alt="Software Screenshot"
+                class="projects__row-img"
+                loading="lazy"
+              />
+            </div>
+            <div class="projects__row-content">
+              <h3 class="projects__row-content-title">Ruby Creations</h3>
+              <p class="projects__row-content-desc">
+                An e-commerce site template created for a small business using HTML, CSS, and vanilla JavaScript.
+              </p>
+              <a
+                href="./project-3.html"
+                class="btn btn--med btn--theme dynamicBgClr"
+                >Learn more</a
+              >
+            </div>
+          </div>
+          <div class="projects__row">
+            <div class="projects__row-img-cont">
+              <img
+                src="/assets/Macbook-device-mockup-PersonalDashboard-a2a45f1e.png"
+                alt="Software Screenshot"
+                class="projects__row-img"
+                loading="lazy"
+              />
+            </div>
+            <div class="projects__row-content">
+              <h3 class="projects__row-content-title">Personal Dashboard</h3>
+              <p class="projects__row-content-desc">
+                A Chrome Extension that gives you an overview over the current time, how the weather is like and how Ethereum is performing. Interacts with multiple APIs using async JS.
+              </p>
+              <a
+                href="./project-4.html"
+                class="btn btn--med btn--theme dynamicBgClr"
+                >Learn more</a
+              >
+            </div>
+          </div>
+          <div class="projects__row">
+            <div class="projects__row-img-cont">
+              <img
+                src="/assets/Macbook-device-mockup-ColorGenerator-6607fa96.png"
+                alt="Software Screenshot"
+                class="projects__row-img"
+                loading="lazy"
+              />
+            </div>
+          <div class="projects__row-content">
+            <h3 class="projects__row-content-title">Color Pallet Generator</h3>
+            <p class="projects__row-content-desc">
+              The Color Pallet site uses a color input and a scheme selection to output a color pallet utilizing data from an API.
+            </p>
+            <a
+              href="./project-5.html"
+              class="btn btn--med btn--theme dynamicBgClr"
+              >Learn more</a
+            >
+          </div>
+        </div>
+        </div>
+      </div>
+    </section>
+    
+    
+    
+    <section id="about" class="about sec-pad">
+      <div class="main-container">
+        <h2 class="heading heading-sec heading-sec__mb-med">
+          <span class="heading-sec__main">About Me</span>
+          <span class="heading-sec__sub">
+            <p>My professional career began in the IT field when I joined the Marine Corps in 2015. Throughout this period, I mastered key skills including technical troubleshooting and team collaboration. Once my service ended, I continued my career in the IT field while working multiple jobs focusing in customer service, system administration, and device management. After approximately 6 years in the IT field, I had a strong desire to use more of my creativity and troubleshooting skills. I chose to transition to web design and development because it allows me to incorporate my creativity while still utilizing some of the key technical skills I learned throughout my experience in IT. I recently graduated with a bachelor’s in Digital Media Design. Additionally, I have been working through coding boot camps to further my knowledge of the field and master the necessary skills.  
+            </p>
+          </span>
+        </h2>
+        <div class="about__content">
+          <div class="about__content-main">
+            <h3 class="about__content-title">Get to know me!</h3>
+            <div class="about__content-details">
+              <p class="about__content-details-para">
+                I have a background in IT that started in the Marine Corps. I have a bachelors degree in Digital Media Design. When I'm not coding, I take care of my two dogs and my many houseplants.
+              </p>
+            </div>
+            <a href="./#contact" class="btn btn--med btn--theme dynamicBgClr"
+              >Contact</a
+            >
+          </div>
+          <div class="about__content-skills">
+            <h3 class="about__content-title">My Skills</h3>
+            <div class="skills">
+              <div class="skills__skill">HTML</div>
+              <div class="skills__skill">CSS</div>
+              <div class="skills__skill">JavaScript</div>
+              <div class="skills__skill">React</div>
+              <div class="skills__skill">GitHub</div>
+              <div class="skills__skill">Figma</div>
+              <div class="skills__skill">Adobe Illustrator</div>
+              <div class="skills__skill">Adobe Photoshop</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    
+
+    
+    
+    <section id="contact" class="contact sec-pad dynamicBg">
+      <div class="main-container">   
+        <h2 class="heading heading-sec heading-sec__mb-med">
+          <span class="heading-sec__main heading-sec__main--lt">Contact</span>
+          <div class="heading-sec__sub heading-sec__sub--lt">
+            <form action="https://formsubmit.co/elizabethlankford1@gmail.com" method="POST">
+              <label>Name</label>
+              <input type="text" id="name" name="name" placeholder="name..." required>
+              <label>Email</label>
+              <input type="email" id="email" name="email" placeholder="email..." required>
+              <label>Phone Number</label>
+              <input type="text" name="phone" id="phone" placeholder="phone number...">
+              <label>Message</label>
+              <textarea id="message" name="message" rows="4" placeholder="message..."></textarea>
+              <button class="btn--bg btn" type="submit">Send</button>
+          </form>
+        </div>
+        </h2>
+      </div>
+    </section>
+    <footer class="main-footer">
+      <div class="main-container">
+        <div class="main-footer__upper">
+          <div class="main-footer__row main-footer__row-1">
+            <h2 class="heading heading-sm main-footer__heading-sm">
+              <span>Social</span>
+            </h2>
+            <div class="main-footer__social-cont">
+              <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/elizabethlankford/">
+                <img
+                  class="main-footer__icon"
+                  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFoAAABaCAMAAAAPdrEwAAAAclBMVEVHcEz///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////9wvwjfAAAAJXRSTlMAsfoQASDMbGvn2FbRAnfuJEf9jQmZg1reofdiM8dypbo94Bp+ddWmIgAAAU1JREFUWMPt1m1vgjAQB3AoK1qhKM8KoE533/8rbtGY0Q62ZndNNLn/S839gHJcGwQcDgcR3YZKqLDV5PIuhntiSS0reETR2jqF78Ska9LCNAklHRp0SEkrg1aUtDDo7kXu2t9avyX+OkTH3vo6kN6+xi/b2wwJAp3cJl9CP/k4z7vdRVJGFTkb9afNrU+Ly7nJ/+ooMDP/++a+1Z06c5Y1EQ1dlQLsbHsK+prCXGqNpuUF5nPA0lUKS1kh6XJRhk6iaFEs08tL4kT/GnH1RkPmjx790UWEpuMseR/y7Gcf5kh6PzxG31q4tbYrnU6eurf+K1F0t5uei0ZwOXM50rWxG+TWS0DRg1FUmYN7j6G31uwcXc63bvTZqjqYF8bQtVVVuhz43egPq6pZqPoHfbSqMjra/t6OdPTaqloxzTTTTDPNNNNPRXM4HA4Hl084VUjWFJFkPgAAAABJRU5ErkJggg=="
+                  alt="icon"
+                />
+              </a>
+              <a target="_blank" rel="noreferrer" href="https://github.com/ElizabethLankford">
+                <img
+                  class="main-footer__icon"
+                  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAMAAAAM7l6QAAAAmVBMVEVHcEz///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////8JA+lgAAAAMnRSTlMA+O72HG0H/RnzUCGdTlG42D2gFPpqskFVHjguCjokrOACtXOavn8OpNnSm0bN++RlYLlWbsgAAAD7SURBVBgZvcBXYoJAAEXRJwLDKNiwxd5jarn7X1wGRxT136MneYnaHWs77SjUo3BnODPLpu40LBU2043IcMNEqmgY7phMF6EFJtMUL53OwSYqpTix1Ojm63zUkGLgQ2cvBmehwlqFBWBCeRGFua66OAN5bZylqobARt4bzkRVXaAjz+LEqpoBVp7FeVVVDtTlrXAyVbWAlbwNzlesq9k7MJS3pbBPVAr3OFt5YZ9CPR03JTXHvRpOP9HZEf6GQP1T0qjGSU+lMCDIj7XgoMKBgk10MTb8qrTAMS1VDPgZxfLWgBnoRhYA8iBo6U6y+0Zev5foURLFOkn0HP87Nyzer9fY7AAAAABJRU5ErkJggg=="
+                  alt="icon"
+                />
+              </a>
+            
+            </div>
+          </div>
+          <div class="main-footer__row main-footer__row-2">
+            <h4 class="heading heading-sm text-lt">Elizabeth Lankford</h4>
+            <p class="main-footer__short-desc">
+              Frontend Developer with a passion for continuous learning and creating.
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="./index.js"></script>
+  </body>
+</html>
