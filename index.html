@@ -1,16 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css"
+    />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    
+
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="icon" type="image/png" sizes="32x32" href="./assets/img/EL-LOGO.png">
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/img/EL-LOGO.png"
+    />
     <title>Elizabeth Lankford Portfolio</title>
     <link rel="stylesheet" href="css/style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Karla:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Karla:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
     <script src="https://smtpjs.com/v3/smtp.js"></script>
   </head>
   <body>
@@ -67,7 +79,7 @@
             <li class="header__sm-menu-link">
               <a href="./index.html#about"> About </a>
             </li>
-            
+
             <li class="header__sm-menu-link">
               <a href="./index.html#projects"> Projects </a>
             </li>
@@ -84,7 +96,8 @@
         <h1 class="heading-primary">Hello, My name is Elizabeth Lankford</h1>
         <div class="home-hero__info">
           <p class="text-primary">
-            I am a passionate frontend developer based near Dallas, TX. I have a passion for creating, learning, and growing my developer skills.
+            I am a passionate fullstack developer based near Dallas, TX. I have
+            a passion for creating, learning, and growing my developer skills.
           </p>
         </div>
         <div class="home-hero__cta">
@@ -93,7 +106,11 @@
       </div>
       <div class="home-hero__socials">
         <div class="home-hero__social">
-          <a href="https://www.linkedin.com/in/elizabethlankford/" target="_blank" class="home-hero__social-icon-link">
+          <a
+            href="https://www.linkedin.com/in/elizabethlankford/"
+            target="_blank"
+            class="home-hero__social-icon-link"
+          >
             <img
               src="./assets/img/linkedin-ico.png"
               alt="icon"
@@ -102,7 +119,11 @@
           </a>
         </div>
         <div class="home-hero__social">
-          <a href="https://github.com/ElizabethLankford" target="_blank" class="home-hero__social-icon-link">
+          <a
+            href="https://github.com/ElizabethLankford"
+            target="_blank"
+            class="home-hero__social-icon-link"
+          >
             <img
               src="./assets/img/github-ico.png"
               alt="icon"
@@ -127,17 +148,38 @@
         <div class="mouse"></div>
       </div>
     </section>
-    
-    
+
     <section id="projects" class="projects sec-pad">
       <div class="main-container">
         <h2 class="heading heading-sec heading-sec__mb-bg">
           <span class="heading-sec__main">Projects</span>
           <span class="heading-sec__sub">
-            All my projects include links to the code and live version. Click the button to learn more about each one.
+            All my projects include links to the code and live version. Click
+            the button to learn more about each one.
           </span>
         </h2>
-
+        <div class="projects__row">
+          <div class="projects__row-img-cont">
+            <img
+              src="./assets/img/Macbook-recipe.png"
+              alt="Software Screenshot"
+              class="projects__row-img"
+              loading="lazy"
+            />
+          </div>
+          <div class="projects__row-content">
+            <h3 class="projects__row-content-title">Familiar recipes</h3>
+            <p class="projects__row-content-desc">
+              Familiar recipes is a full stack project to keep track of your
+              favorite recipes with a search functionality.
+            </p>
+            <a
+              href="./project-5.html"
+              class="btn btn--med btn--theme dynamicBgClr"
+              >Learn more</a
+            >
+          </div>
+        </div>
         <div class="projects__content">
           <div class="projects__row">
             <div class="projects__row-img-cont">
@@ -151,7 +193,8 @@
             <div class="projects__row-content">
               <h3 class="projects__row-content-title">Plantie Selva</h3>
               <p class="projects__row-content-desc">
-                This is an e-commerce website template created using React, React Router, JavaScript, CSS, HTML, and Vite.
+                This is an e-commerce website template created using React,
+                React Router, JavaScript, CSS, HTML, and Vite.
               </p>
               <a
                 href="./project-2.html"
@@ -172,7 +215,10 @@
             <div class="projects__row-content">
               <h3 class="projects__row-content-title">Quizzical</h3>
               <p class="projects__row-content-desc">
-                Quizzical is a simple trivia app that utilizes the Open Trivia Database API to retrieve random trivia questions for the user to answer and scores them. It's built with functional React components.
+                Quizzical is a simple trivia app that utilizes the Open Trivia
+                Database API to retrieve random trivia questions for the user to
+                answer and scores them. It's built with functional React
+                components.
               </p>
               <a
                 href="./project-1.html"
@@ -194,7 +240,9 @@
             <div class="projects__row-content">
               <h3 class="projects__row-content-title">Personal Dashboard</h3>
               <p class="projects__row-content-desc">
-                A Chrome Extension that gives you an overview over the current time, how the weather is like and how Ethereum is performing. Interacts with multiple APIs using async JS.
+                A Chrome Extension that gives you an overview over the current
+                time, how the weather is like and how Ethereum is performing.
+                Interacts with multiple APIs using async JS.
               </p>
               <a
                 href="./project-4.html"
@@ -203,38 +251,30 @@
               >
             </div>
           </div>
-          <div class="projects__row">
-            <div class="projects__row-img-cont">
-              <img
-                src="./assets/img/Macbook-device-mockup-ColorGenerator.png"
-                alt="Software Screenshot"
-                class="projects__row-img"
-                loading="lazy"
-              />
-            </div>
-          <div class="projects__row-content">
-            <h3 class="projects__row-content-title">Color Pallet Generator</h3>
-            <p class="projects__row-content-desc">
-              The Color Pallet site uses a color input and a scheme selection to output a color pallet utilizing data from an API.
-            </p>
-            <a
-              href="./project-5.html"
-              class="btn btn--med btn--theme dynamicBgClr"
-              >Learn more</a
-            >
-          </div>
-        </div>
         </div>
       </div>
     </section>
-    
-    
+
     <section id="about" class="about sec-pad">
       <div class="main-container">
         <h2 class="heading heading-sec heading-sec__mb-med">
           <span class="heading-sec__main">About Me</span>
           <span class="heading-sec__sub">
-            <p>My professional career began in the IT field when I joined the Marine Corps in 2015. Throughout this period, I mastered key skills including technical troubleshooting and team collaboration. Once my service ended, I continued my career in the IT field while working multiple jobs focusing in customer service, system administration, and device management. After approximately 6 years in the IT field, I had a strong desire to use more of my creativity and troubleshooting skills. I chose to transition to web design and development because it allows me to incorporate my creativity while still utilizing some of the key technical skills I learned throughout my experience in IT. I recently graduated with a Bachelor’s degree in Digital Media Design. Additionally, I have been working through coding boot camps to further my knowledge of the field and master the necessary skills.  
+            <p>
+              My professional career began in the IT field when I joined the
+              Marine Corps in 2015. Throughout this period, I mastered key
+              skills including technical troubleshooting and team collaboration.
+              Once my service ended, I continued my career in the IT field while
+              working multiple jobs focusing in customer service, system
+              administration, and device management. After approximately 6 years
+              in the IT field, I had a strong desire to use more of my
+              creativity and troubleshooting skills. I chose to transition to
+              web design and development because it allows me to incorporate my
+              creativity while still utilizing some of the key technical skills
+              I learned throughout my experience in IT. I recently graduated
+              with a Bachelor’s degree in Digital Media Design. Additionally, I
+              have been working through coding boot camps to further my
+              knowledge of the field and master the necessary skills.
             </p>
           </span>
         </h2>
@@ -243,7 +283,10 @@
             <h3 class="about__content-title">Get to know me!</h3>
             <div class="about__content-details">
               <p class="about__content-details-para">
-                I have a background in IT that started in the Marine Corps. I have a Bachelor's degree in Digital Media Design. When I'm not coding,  I am rooting for the Dallas Stars or taking care of my two dogs and my many houseplants.
+                I have a background in IT that started in the Marine Corps. I
+                have a Bachelor's degree in Digital Media Design. When I'm not
+                coding, I am rooting for the Dallas Stars or taking care of my
+                two dogs and my many houseplants.
               </p>
             </div>
             <a href="./#contact" class="btn btn--med btn--theme dynamicBgClr"
@@ -257,6 +300,10 @@
               <div class="skills__skill">CSS</div>
               <div class="skills__skill">JavaScript</div>
               <div class="skills__skill">React</div>
+              <div class="skills__skill">React Router</div>
+              <div class="skills__skill">Redux</div>
+              <div class="skills__skill">Express.js</div>
+              <div class="skills__skill">PostgreSQL</div>
               <div class="skills__skill">GitHub</div>
               <div class="skills__skill">Figma</div>
               <div class="skills__skill">Adobe Illustrator</div>
@@ -266,28 +313,49 @@
         </div>
       </div>
     </section>
-    
-    
 
-    
-    
     <section id="contact" class="contact sec-pad dynamicBg">
-      <div class="main-container">   
+      <div class="main-container">
         <h2 class="heading heading-sec heading-sec__mb-med">
           <span class="heading-sec__main heading-sec__main--lt">Contact</span>
           <div class="heading-sec__sub heading-sec__sub--lt">
-            <form action="https://formsubmit.co/elizabethlankford1@gmail.com" method="POST">
+            <form
+              action="https://formsubmit.co/elizabethlankford1@gmail.com"
+              method="POST"
+            >
               <label>Name</label>
-              <input type="text" id="name" name="name" placeholder="name..." required>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="name..."
+                required
+              />
               <label>Email</label>
-              <input type="email" id="email" name="email" placeholder="email..." required>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="email..."
+                required
+              />
               <label>Phone Number</label>
-              <input type="text" name="phone" id="phone" placeholder="phone number...">
+              <input
+                type="text"
+                name="phone"
+                id="phone"
+                placeholder="phone number..."
+              />
               <label>Message</label>
-              <textarea id="message" name="message" rows="4" placeholder="message..."></textarea>
+              <textarea
+                id="message"
+                name="message"
+                rows="4"
+                placeholder="message..."
+              ></textarea>
               <button class="btn--bg btn" type="submit">Send</button>
-          </form>
-        </div>
+            </form>
+          </div>
         </h2>
       </div>
     </section>
@@ -299,27 +367,35 @@
               <span>Social</span>
             </h2>
             <div class="main-footer__social-cont">
-              <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/elizabethlankford/">
+              <a
+                target="_blank"
+                rel="noreferrer"
+                href="https://www.linkedin.com/in/elizabethlankford/"
+              >
                 <img
                   class="main-footer__icon"
                   src="./assets/img/linkedin-ico.png"
                   alt="icon"
                 />
               </a>
-              <a target="_blank" rel="noreferrer" href="https://github.com/ElizabethLankford">
+              <a
+                target="_blank"
+                rel="noreferrer"
+                href="https://github.com/ElizabethLankford"
+              >
                 <img
                   class="main-footer__icon"
                   src="./assets/img/github-ico.png"
                   alt="icon"
                 />
               </a>
-            
             </div>
           </div>
           <div class="main-footer__row main-footer__row-2">
             <h4 class="heading heading-sm text-lt">Elizabeth Lankford</h4>
             <p class="main-footer__short-desc">
-              Frontend Developer with a passion for continuous learning and creating.
+              Frontend Developer with a passion for continuous learning and
+              creating.
             </p>
           </div>
         </div>
